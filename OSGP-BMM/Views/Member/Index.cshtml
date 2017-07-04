@@ -1,0 +1,81 @@
+﻿@model IEnumerable<OSGP_BMM.Models.DB.dbo_Members>
+
+@{
+    ViewBag.Title = "Member List";
+}
+
+<div class="page-wrapper">
+    <div class="container-fluid" style="margin-top: -20px;">
+        <div class="row page-titles">
+            <div class="col-md-6 col-8 align-self-center">
+                <h3 class="text-themecolor m-b-0 m-t-0">Member List</h3>
+  
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- column -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-block">
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Lastname)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Firstname)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Middlename)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Startdate)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Course)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Assignment)
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var member in ViewBag.Members)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @member.Lastname
+                                            </td>
+                                            <td>
+                                                @member.Firstname
+                                            </td>
+                                            <td>
+                                                @member.Middlename
+                                            </td>
+                                            <td>
+                                                @member.Startdate.ToString("dd-MMM-yyyy")
+                                            </td>
+                                            <td>
+                                                @member.Course
+                                            </td>
+                                            <td>
+                                                @member.Assignment
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

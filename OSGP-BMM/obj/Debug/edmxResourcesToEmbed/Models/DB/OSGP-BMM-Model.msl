@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MadelieneDBModelStoreContainer" CdmEntityContainer="MadelieneDBEntities">
+    <EntitySetMapping Name="dbo_Members">
+      <EntityTypeMapping TypeName="MadelieneDBModel.dbo_Members">
+        <MappingFragment StoreEntitySet="dbo_Members">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Middlename" ColumnName="Middlename" />
+          <ScalarProperty Name="Startdate" ColumnName="Startdate" />
+          <ScalarProperty Name="Enddate" ColumnName="Enddate" />
+          <ScalarProperty Name="Course" ColumnName="Course" />
+          <ScalarProperty Name="Assignment" ColumnName="Assignment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
